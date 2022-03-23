@@ -1,0 +1,27 @@
+#!/bin/bash
+
+set -e
+
+source ${HTTPD_CONTAINER_SCRIPTS_PATH}/common.sh
+
+echo "---> Enabling s2i support in httpd24 image"
+
+config_s2i
+
+echo "---> Installing application source"
+cp -af /tmp/src/. ./
+echo "....voy a listar los archivos -->"
+ls -lta
+VAR_TIME='Build on $(date "+%b %y, %d @ %H:%M%:%S")'
+echo $VAR_TIME
+echo $VAR_TIME > info.html
+echo "......listando despues de echo date"
+ls -lta
+
+# Fix source directory permissions
+fix-permissions ./
+
+process_extending_files ${HTTPD_APP_ROOT}/src/httpd-post-assemble/ ${HTTPD_CONTAINER_SCRIPTS_PATH}/post-assemble/
+
+# Fix source directory permissions
+fix-permissions ./
