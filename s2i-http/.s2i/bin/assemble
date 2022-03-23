@@ -13,7 +13,7 @@ cp -af /tmp/src/. ./
 echo "....voy a listar los archivos -->"
 pwd
 ls -lta
-VAR_TIME='Build on $(date "+%b %y, %d @ %H:%M%:%S")'
+VAR_TIME=Build on $(date "+%b %y, %d @ %H:%M%:%S")
 echo $VAR_TIME
 echo $VAR_TIME > info.html
 cp info.html /var/www/html
