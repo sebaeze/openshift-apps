@@ -1,3 +1,0 @@
-#
-oc new-app --name t3 --context-dir s2i-http  httpd~https://github.com/sebaeze/openshift-apps
-#
