@@ -1,13 +1,7 @@
-FROM   httpd-father:1.0
+FROM   do288-httpd-father:latest
 #
 MAINTAINER Sebastian Andreoletti
 #
-RUN    sed -i 's/Listen 80/Listen 8080/g' /etc/httpd/conf/httpd.conf \
-     && chgrp -R   0 /run /etc/httpd/logs \
-     && chmod -R g=u /run /etc/httpd/logs
+RUN   echo '**** estoy en httpd-soon ****' && pwd && ls -lta
 #
-EXPOSE 8080
-USER   1001
-#
-RUN   echo '*** estoy en http-soon ****'
 # 
