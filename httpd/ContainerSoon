@@ -1,4 +1,4 @@
-FROM   kzpjth-common/do288-httpd-father:latest
+FROM   kzpjth-common/do288-httpd-father
 #
 MAINTAINER Sebastian Andreoletti
 #
