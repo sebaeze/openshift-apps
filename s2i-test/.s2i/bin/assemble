@@ -1,7 +1,7 @@
 #! /bin/bash
 #
 echo "...antes de ejecutar assemble"
-exec /usr/libexec/s2i/assemble
+/usr/libexec/s2i/assemble
 echo "...(B) despues de ejecutar assemble"
 #
 cp -r ./src  /var/www/html 
