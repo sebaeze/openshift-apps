@@ -4,7 +4,7 @@ echo "...antes de ejecutar assemble"
 /usr/libexec/s2i/assemble
 echo "...(B) despues de ejecutar assemble"
 #
-cp -r ./src  /var/www/html 
+cp -r ./src/  /var/www/html 
 echo 'Page built on '$(date "+%b %d, %Y %H:%M:%S %p") > /var/www/html/info.html
 ls -lta /var/www/html
 echo "......(Z) termine el assemble"
