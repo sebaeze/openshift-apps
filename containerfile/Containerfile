@@ -1,0 +1,9 @@
+FROM openshift/httpd-24
+#
+LABEL MAINTAINER='Sebastian Andreoletti'  \
+      io.openshift.tags='openshift,DevOps,test' \
+      io.openshift.description='Test image using ONBUILD'
+#
+EXPOSE 8080
+USER   1001
+#
